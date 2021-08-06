@@ -10,8 +10,8 @@ ssh csss@sfucsss.org "rm -fr /home/csss/csss-site/*.json"
 ssh csss@sfucsss.org "rm /home/csss/create_jsons.sh"
 
 mkdir  ~/fixtures || true
-mv about.json ~/fixtures/.
 python3 ./update_confidential_info.py
+mv about.json fixtures/.
 mv auth.json ~/fixtures/.
 mv announcements.json ~/fixtures/.
 mv django_mailbox.json ~/fixtures/.
