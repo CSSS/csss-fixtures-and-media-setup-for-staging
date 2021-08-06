@@ -1,7 +1,7 @@
 import json
 
 fields_to_change = ['sfuid', 'sfu_email_alias', 'github_username', 'gmail']
-file_name = '../../migrations/fixtures/about.json'
+file_name = 'about.json'
 about_fixtures = json.load(open(file_name, ))
 for officer_info in about_fixtures:
     if 'fields' in officer_info and officer_info['model'] == 'about.officer':
