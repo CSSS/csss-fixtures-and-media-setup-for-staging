@@ -2,6 +2,8 @@
 
 set -e -o xtrace
 
+BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+cd "${BASE_DIR}"
 
 scp "0_create_fixture_jsons.sh" csss@sfucsss.org:"/home/csss/create_jsons.sh"
 ssh csss@sfucsss.org "/home/csss/create_jsons.sh"
