@@ -2,7 +2,7 @@
 
 set -e -o xtrace
 
-. ~/set_env.sh site_envs/site_envs_django_admin
+. ~/set_env.sh site_envs/site_envs_create_fixtures
 . ~/envCSSS/bin/activate
 cd ~/csss-site/
 
