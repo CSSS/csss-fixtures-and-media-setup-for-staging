@@ -11,19 +11,19 @@ scp -r csss@sfucsss.org:"/home/csss/csss-site/*.json" .
 ssh csss@sfucsss.org "rm -fr /home/csss/csss-site/*.json"
 ssh csss@sfucsss.org "rm /home/csss/create_jsons.sh"
 
-mkdir  ~/fixtures || true
+rm -fr /mnt/dev_csss_website_media/fixtures || true
+mkdir /mnt/dev_csss_website_media/fixtures || true
 python3 ./redact_confidential_info.py
-mv about.json ~/fixtures/.
-mv auth.json ~/fixtures/.
-mv announcements.json ~/fixtures/.
-mv django_mailbox.json ~/fixtures/.
-mv elections.json ~/fixtures/.
-mv resource_management.json ~/fixtures/.
+mv about.json /mnt/dev_csss_website_media/fixtures/.
+mv auth.json /mnt/dev_csss_website_media/fixtures/.
+mv announcements.json /mnt/dev_csss_website_media/fixtures/.
+mv django_mailbox.json /mnt/dev_csss_website_media/fixtures/.
+mv elections.json /mnt/dev_csss_website_media/fixtures/.
+mv resource_management.json /mnt/dev_csss_website_media/fixtures/.
 
-scp -r csss@sfucsss.org:"/home/csss/media_root/mailbox_attachments" ~/.
+rm -fr /mnt/dev_csss_website_media/mailbox_attachments || true
+scp -r csss@sfucsss.org:"/home/csss/media_root/mailbox_attachments" /mnt/dev_csss_website_media/.
 
 rm -fr /mnt/dev_csss_website_media/exec-photos
-
 scp -r csss@sfucsss.org:"/home/csss/static_root/about_static/exec-photos" /mnt/dev_csss_website_media/.
-
 rm -fr /mnt/dev_csss_website_media/exec-photos/.git
