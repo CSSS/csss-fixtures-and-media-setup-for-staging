@@ -22,6 +22,8 @@ mv resource_management.json ~/fixtures/.
 
 scp -r csss@sfucsss.org:"/home/csss/media_root/mailbox_attachments" ~/.
 
+rm -fr /mnt/dev_csss_website_media/exec-photos
+
 scp -r csss@sfucsss.org:"/home/csss/static_root/about_static/exec-photos" /mnt/dev_csss_website_media/.
 
 rm -fr /mnt/dev_csss_website_media/*.git
