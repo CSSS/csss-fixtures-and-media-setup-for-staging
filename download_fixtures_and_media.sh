@@ -26,4 +26,4 @@ rm -fr /mnt/dev_csss_website_media/exec-photos
 
 scp -r csss@sfucsss.org:"/home/csss/static_root/about_static/exec-photos" /mnt/dev_csss_website_media/.
 
-rm -fr /mnt/dev_csss_website_media/*.git
+rm -fr /mnt/dev_csss_website_media/exec-photos/*.git
