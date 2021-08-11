@@ -5,14 +5,14 @@ set -e -o xtrace
 BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 cd "${BASE_DIR}"
 
-scp "0_create_fixture_jsons.sh" csss@sfucsss.org:"/home/csss/create_jsons.sh"
+scp "create_fixture_jsons.sh" csss@sfucsss.org:"/home/csss/create_jsons.sh"
 ssh csss@sfucsss.org "/home/csss/create_jsons.sh"
 scp -r csss@sfucsss.org:"/home/csss/csss-site/*.json" .
 ssh csss@sfucsss.org "rm -fr /home/csss/csss-site/*.json"
 ssh csss@sfucsss.org "rm /home/csss/create_jsons.sh"
 
 mkdir  ~/fixtures || true
-python3 ./update_confidential_info.py
+python3 ./redact_confidential_info.py
 mv about.json ~/fixtures/.
 mv auth.json ~/fixtures/.
 mv announcements.json ~/fixtures/.
