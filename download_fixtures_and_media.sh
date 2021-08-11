@@ -20,4 +20,4 @@ mv django_mailbox.json ~/fixtures/.
 mv elections.json ~/fixtures/.
 mv resource_management.json ~/fixtures/.
 
- scp -r csss@sfucsss.org:"/home/csss/media_root/mailbox_attachments" .
+scp -r csss@sfucsss.org:"/home/csss/media_root/mailbox_attachments" ~/.
