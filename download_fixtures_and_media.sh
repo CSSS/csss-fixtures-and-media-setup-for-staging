@@ -5,7 +5,7 @@ set -e -o xtrace
 BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 cd "${BASE_DIR}"
 
-scp "create_fixture_jsons.sh" csss@sfucsss.org:"/home/csss/create_jsons.sh"
+scp "csss_site_create_fixture_jsons.sh" csss@sfucsss.org:"/home/csss/create_jsons.sh"
 ssh csss@sfucsss.org "/home/csss/create_jsons.sh"
 scp -r csss@sfucsss.org:"/home/csss/csss-site/*.json" .
 ssh csss@sfucsss.org "rm -fr /home/csss/csss-site/*.json"
@@ -27,3 +27,12 @@ scp -r csss@sfucsss.org:"/home/csss/media_root/mailbox_attachments" /mnt/dev_css
 rm -fr /mnt/dev_csss_website_media/exec-photos
 scp -r csss@sfucsss.org:"/home/csss/static_root/about_static/exec-photos" /mnt/dev_csss_website_media/.
 rm -fr /mnt/dev_csss_website_media/exec-photos/.git
+
+
+scp "wall_e_create_fixtures_json.sh" csss@jenkins.sfucsss.org:"/home/csss/create_jsons.sh"
+ssh csss@jenkins.sfucsss.org "/home/csss/create_jsons.sh"
+scp -r csss@jenkins.sfucsss.org:"/home/csss/wall_e.json" .
+ssh csss@jenkins.sfucsss.org "rm -fr /home/csss/wall_e.json"
+ssh csss@jenkins.sfucsss.org "rm /home/csss/create_jsons.sh"
+mkdir /mnt/dev_csss_wall_e/fixtures || true
+mv wall_e.json /mnt/dev_csss_wall_e/fixtures/.
