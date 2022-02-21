@@ -10,5 +10,5 @@ ssh csss@jenkins.sfucsss.org "/home/csss/create_jsons.sh"
 scp -r csss@jenkins.sfucsss.org:"/home/csss/wall_e.json" .
 ssh csss@jenkins.sfucsss.org "rm -fr /home/csss/wall_e.json"
 ssh csss@jenkins.sfucsss.org "rm /home/csss/create_jsons.sh"
-mkdir /mnt/dev_csss_wall_e/fixtures || true
+mkdir -p /mnt/dev_csss_wall_e/fixtures || true
 mv wall_e.json /mnt/dev_csss_wall_e/fixtures/.
