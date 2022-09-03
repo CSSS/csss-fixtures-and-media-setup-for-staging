@@ -11,4 +11,4 @@ python3 manage.py dumpdata announcements --indent 4 --output announcements.json
 python3 manage.py dumpdata django_mailbox --indent 4 --output django_mailbox.json
 python3 manage.py dumpdata elections --indent 4 --output elections.json
 python3 manage.py dumpdata auth.group --indent 4 --output auth.json
-python3 manage.py dumpdata resource_management.officerpositiongithubteam resource_management.officerpositiongithubteammapping --indent 4 --output resource_management.json
+python3 manage.py dumpdata resource_management.officerpositiongithubteam resource_management.officerpositiongithubteammapping resource_management.googledrivenonmediafiletype --indent 4 --output resource_management.json
