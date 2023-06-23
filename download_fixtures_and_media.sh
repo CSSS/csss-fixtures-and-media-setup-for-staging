@@ -21,6 +21,7 @@ mv announcements.json /mnt/dev_csss_website_media/fixtures/.
 mv django_mailbox.json /mnt/dev_csss_website_media/fixtures/.
 mv elections.json /mnt/dev_csss_website_media/fixtures/.
 mv resource_management.json /mnt/dev_csss_website_media/fixtures/.
+mv csss_cron_info.json /mnt/dev_csss_website_media/fixtures/.
 
 rm -fr /mnt/dev_csss_website_media/mailbox_attachments || true
 scp -r csss@sfucsss.org:"/home/csss/media_root/mailbox_attachments" /mnt/dev_csss_website_media/.
