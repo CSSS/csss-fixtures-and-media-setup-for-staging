@@ -12,23 +12,23 @@ scp -r csss@sfucsss.org:"/home/csss/csss-site/*.json" .
 ssh csss@sfucsss.org "rm -fr /home/csss/csss-site/*.json"
 ssh csss@sfucsss.org "rm /home/csss/create_jsons.sh"
 
-rm -fr /mnt/dev_csss_website_media/fixtures || true
-mkdir /mnt/dev_csss_website_media/fixtures || true
+rm -fr /home/csss/staging_assets/website/fixtures || true
+mkdir /home/csss/staging_assets/website/fixtures || true
 python3 ./redact_confidential_info.py
-mv about.json /mnt/dev_csss_website_media/fixtures/.
-mv auth.json /mnt/dev_csss_website_media/fixtures/.
-mv announcements.json /mnt/dev_csss_website_media/fixtures/.
-mv django_mailbox.json /mnt/dev_csss_website_media/fixtures/.
-mv elections.json /mnt/dev_csss_website_media/fixtures/.
-mv resource_management.json /mnt/dev_csss_website_media/fixtures/.
-mv csss_cron_info.json /mnt/dev_csss_website_media/fixtures/.
+mv about.json /home/csss/staging_assets/website/fixtures/.
+mv auth.json /home/csss/staging_assets/website/fixtures/.
+mv announcements.json /home/csss/staging_assets/website/fixtures/.
+mv django_mailbox.json /home/csss/staging_assets/website/fixtures/.
+mv elections.json /home/csss/staging_assets/website/fixtures/.
+mv resource_management.json /home/csss/staging_assets/website/fixtures/.
+mv csss_cron_info.json /home/csss/staging_assets/website/fixtures/.
 
-rm -fr /mnt/dev_csss_website_media/mailbox_attachments || true
-scp -r csss@sfucsss.org:"/home/csss/media_root/mailbox_attachments" /mnt/dev_csss_website_media/.
+rm -fr /home/csss/staging_assets/website/mailbox_attachments || true
+scp -r csss@sfucsss.org:"/home/csss/media_root/mailbox_attachments" /home/csss/staging_assets/website/.
 
-rm -fr /mnt/dev_csss_website_media/exec-photos
-scp -r csss@sfucsss.org:"/home/csss/static_root/about_static/exec-photos" /mnt/dev_csss_website_media/.
-rm -fr /mnt/dev_csss_website_media/exec-photos/.git
+rm -fr /home/csss/staging_assets/website/exec-photos
+scp -r csss@sfucsss.org:"/home/csss/static_root/about_static/exec-photos" /home/csss/staging_assets/website/.
+rm -fr /home/csss/staging_assets/website/exec-photos/.git
 
 
 ## Wall_e media
@@ -38,5 +38,5 @@ ssh csss@jenkins.sfucsss.org "/home/csss/create_jsons.sh"
 scp -r csss@jenkins.sfucsss.org:"/home/csss/wall_e.json" .
 ssh csss@jenkins.sfucsss.org "rm -fr /home/csss/wall_e.json"
 ssh csss@jenkins.sfucsss.org "rm /home/csss/create_jsons.sh"
-mkdir -p /mnt/dev_csss_wall_e/fixtures || true
-mv wall_e.json /mnt/dev_csss_wall_e/fixtures/.
+mkdir -p /home/csss/staging_assets/wall_e/fixtures || true
+mv wall_e.json /home/csss/staging_assets/wall_e/fixtures/.
