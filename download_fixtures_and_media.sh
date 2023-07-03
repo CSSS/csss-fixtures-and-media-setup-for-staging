@@ -22,6 +22,7 @@ mv django_mailbox.json /home/csss/staging_assets/website/fixtures/.
 mv elections.json /home/csss/staging_assets/website/fixtures/.
 mv resource_management.json /home/csss/staging_assets/website/fixtures/.
 mv csss_cron_info.json /home/csss/staging_assets/website/fixtures/.
+mv errors.json /home/csss/staging_assets/website/fixtures/.
 
 rm -fr /home/csss/staging_assets/website/mailbox_attachments || true
 scp -r csss@sfucsss.org:"/home/csss/media_root/mailbox_attachments" /home/csss/staging_assets/website/.
