@@ -2,7 +2,7 @@
 
 set -e -o xtrace
 
-. ~/set_env.sh site_envs/site_envs_create_fixtures
+. ~/set_env.sh csss_site_envs/csss_site_create_fixtures.env
 . ~/envCSSS/bin/activate
 cd ~/csss-site/
 
