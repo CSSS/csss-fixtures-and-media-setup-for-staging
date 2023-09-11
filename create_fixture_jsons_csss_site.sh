@@ -14,3 +14,5 @@ python3 manage.py dumpdata auth.group --indent 4 --output auth.json
 python3 manage.py dumpdata csss.cronjob csss.cronjobrunstat --indent 4 --output csss_cron_info.json
 python3 manage.py dumpdata csss.cssserror --indent 4 --output errors.json
 python3 manage.py dumpdata resource_management.officerpositiongithubteam resource_management.officerpositiongithubteammapping resource_management.googledrivenonmediafiletype resource_management.mediatobemoved --indent 4 --output resource_management.json
+
+rm -r "${LOG_LOCATION}"
