@@ -8,7 +8,7 @@ cd ~/csss-site/
 
 python3 manage.py dumpdata about --indent 4 --output about.json
 python3 manage.py dumpdata announcements --indent 4 --output announcements.json
-python3 manage.py dumpdata django_mailbox --indent 4 --output django_mailbox.json
+python3 manage.py dumpdata django_mailbox  --exclude=django_mailbox.mailbox --indent 4 --output django_mailbox.json
 python3 manage.py dumpdata elections --indent 4 --output elections.json
 python3 manage.py dumpdata auth.group --indent 4 --output auth.json
 python3 manage.py dumpdata csss.cronjob csss.cronjobrunstat --indent 4 --output csss_cron_info.json
