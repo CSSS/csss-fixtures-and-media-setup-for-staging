@@ -16,3 +16,13 @@ for officer_info in about_fixtures:
 
 with open(file_name, 'w+') as f:
     json.dump(about_fixtures, f, indent=4)
+
+
+file_name = 'django_mailbox.json'
+django_mailbox_fixtures = json.load(open(file_name, ))
+for entry in django_mailbox_fixtures:
+    if entry['model'] == 'django_mailbox.mailbox':
+        entry['fields']['uri'] = 'uri'
+
+with open(file_name, 'w+') as f:
+    json.dump(django_mailbox_fixtures, f, indent=4)

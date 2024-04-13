@@ -12,10 +12,10 @@ mkdir -p /home/csss/staging_assets/website/fixtures || true
 scp "create_fixture_jsons_csss_site.sh" csss@sfucsss.org:"/home/csss/create_jsons.sh"
 ssh csss@sfucsss.org "/home/csss/create_jsons.sh"
 scp csss@sfucsss.org:"/home/csss/csss-site/about.json" .
+scp csss@sfucsss.org:"/home/csss/csss-site/django_mailbox.json" .
 scp csss@sfucsss.org:"/home/csss/csss-site/announcements.json" /home/csss/staging_assets/website/fixtures/.
 scp csss@sfucsss.org:"/home/csss/csss-site/auth.json" /home/csss/staging_assets/website/fixtures/.
 scp csss@sfucsss.org:"/home/csss/csss-site/csss_cron_info.json" /home/csss/staging_assets/website/fixtures/.
-scp csss@sfucsss.org:"/home/csss/csss-site/django_mailbox.json" /home/csss/staging_assets/website/fixtures/.
 scp csss@sfucsss.org:"/home/csss/csss-site/elections.json" /home/csss/staging_assets/website/fixtures/.
 scp csss@sfucsss.org:"/home/csss/csss-site/errors.json" /home/csss/staging_assets/website/fixtures/.
 scp csss@sfucsss.org:"/home/csss/csss-site/resource_management.json" /home/csss/staging_assets/website/fixtures/.
@@ -33,6 +33,7 @@ ssh csss@sfucsss.org "rm /home/csss/create_jsons.sh"
 
 python3 ./redact_confidential_info.py
 mv about.json /home/csss/staging_assets/website/fixtures/.
+mv django_mailbox.json /home/csss/staging_assets/website/fixtures/.
 
 mkdir -p /home/csss/staging_assets/website/mailbox_attachments || true
 scp -r csss@sfucsss.org:"/home/csss/media_root/mailbox_attachments" /home/csss/staging_assets/website/.
