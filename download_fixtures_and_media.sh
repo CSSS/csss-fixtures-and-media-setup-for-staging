@@ -55,6 +55,7 @@ scp csss@jenkins.sfucsss.org:"/home/csss/profilebucketsinprogress.json" /home/cs
 scp csss@jenkins.sfucsss.org:"/home/csss/userpoints.json" /home/csss/staging_assets/wall_e/fixtures/.
 scp csss@jenkins.sfucsss.org:"/home/csss/levels.json" /home/csss/staging_assets/wall_e/fixtures/.
 scp csss@jenkins.sfucsss.org:"/home/csss/reminders.json" /home/csss/staging_assets/wall_e/fixtures/.
+scp csss@jenkins.sfucsss.org:"/home/csss/updatedusers.json" /home/csss/staging_assets/wall_e/fixtures/.
 
 ssh csss@jenkins.sfucsss.org "rm /home/csss/create_jsons.sh"
 ssh csss@jenkins.sfucsss.org "rm /home/csss/banrecords.json"
@@ -63,3 +64,4 @@ ssh csss@jenkins.sfucsss.org "rm /home/csss/profilebucketsinprogress.json"
 ssh csss@jenkins.sfucsss.org "rm /home/csss/userpoints.json"
 ssh csss@jenkins.sfucsss.org "rm /home/csss/levels.json"
 ssh csss@jenkins.sfucsss.org "rm /home/csss/reminders.json"
+ssh csss@jenkins.sfucsss.org "rm /home/csss/updatedusers.json"
